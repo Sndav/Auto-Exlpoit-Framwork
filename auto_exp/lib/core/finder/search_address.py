@@ -30,6 +30,9 @@ class W_Bing(object):
 		for val in match:
 				url.append(val)
 		return url
+class W_Zoomeye(object):
+	def search(self,keywords):
+		pass
 
 
 

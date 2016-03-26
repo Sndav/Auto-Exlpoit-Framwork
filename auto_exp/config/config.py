@@ -21,5 +21,6 @@ class config(object):
 		}
 		self.default_dns_server = 'auto_exp/dic/dns_servers.txt'
 		self.default_web_dir = 'auto_exp/webaddr.dic'
-		self.shodan_api = 'iugjvSn7YGEikIrSDzgw3XBkI3RVYxG5'
+		self.shodan_api = ''
+		self.zoomeye.api = ''
 
