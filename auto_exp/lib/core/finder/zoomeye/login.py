@@ -1,21 +1,16 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import json
-import requests
+from auto_exp.lib.core.network.netjson import N_json
 
-class Zoo_login(object):
-	def __init__(self,user,passd):
+class Zoo_login():
+	net = N_json()
+	def __init__(self,user,password):
 		self.dic = {
 			"username":user,
-			"password":passd
+			"password":password
 		}
-		self.dic = json.dumps(self.dic)
 	def get_token(self):
-		res = requests.post("http://api.zoomeye.org/user/login",data = self.dic)
-		res = res.text
-		json_t = json.loads(res)
-		return json_t
-
+		return self.net.request("https://api.zoomeye.org/user/login",self.dic)
 if __name__ == "__main__":
 	pass
