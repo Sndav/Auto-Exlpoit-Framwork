@@ -18,18 +18,18 @@ class Zoo_function(object):
 		except:
 			self.output.print_error(token['message'])
 	def host_search(self,query,page='1',facets=''):
-		headers = json.dumps({
+		headers = {
 			"Authorization": "JWT "+self.token
-		})
-		url = "http://api.zoomeye.org/host/search\?query\=\""+query+"\"\&page\="+str(page)+"\&facet\="+facets
-		res = self.njson.request(url,header=headers)
+		}
+		url = "http://api.zoomeye.org/host/search/?query=\""+query+"\"&page="+str(page)+"&facet="+facets
+		res = self.njson.request(url,headers=headers,method="get")
 		return  res
 	def web_search(self,query,page='1',facets=''):
-		headers = json.dumps({
+		headers = {
 			"Authorization": "JWT "+self.token
-		})
-		url = "http://api.zoomeye.org/web/search\?query\=\""+query+"\"\&page\="+str(page)+"\&facet\="+facets
-		res = self.njson.request(url,header=headers)
+		}
+		url = "https://api.zoomeye.org/web/search\?query\=\""+query+"\"&page="+str(page)+"&facet="+facets
+		res = self.njson.request(url,headers=headers,method="get")
 		return  res
 if __name__ == "__main__":
 	pass
