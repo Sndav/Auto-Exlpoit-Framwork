@@ -26,6 +26,7 @@ class W_Bing(object):
 		page = int(pages)
 		query=keywords.replace(' ','+')
 		url = []
+
 		res = requests.get('http://www.bing.com/search?q='+query+'&count='+str(count)+"&first="+str((page-1)*int(count)+1))
 		match = re.findall(r'\<li class="b_algo"\>\<h2\>\<a href=\"(.*?)\" target="_blank"', res.content)
 		for val in match:

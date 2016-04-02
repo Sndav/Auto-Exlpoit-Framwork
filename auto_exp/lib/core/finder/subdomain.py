@@ -4,14 +4,13 @@
 # my[at]lijiejie.com (http://www.lijiejie.com)
 
 import Queue
-import sys
 import dns.resolver
 import threading
 import time
-import optparse
+from auto_exp.lib.core.network.netjson import N_json
 
 
-class S_Subscan:
+class S_Subscan1:
 	def __init__(self, target, names_file, threads_num = 10):
 		self.target = target.strip()
 		self.names_file = names_file
@@ -88,4 +87,10 @@ class S_Subscan:
 			t.start()
 		while self.thread_count > 0:
 			time.sleep(0.01)
+
+class S_Subscan2(object):
+	j = N_json()
+	def search(self,domain):
+		return self.j.request(method="get",url = "http://101.200.161.172/api/v1.0/domain/"+domain)
+
 
