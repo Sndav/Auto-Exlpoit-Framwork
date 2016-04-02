@@ -4,6 +4,7 @@
 import shodan
 import requests
 import re
+from auto_exp.lib.core.finder.zoomeye.main import Zoo_main
 
 # Shodan Search
 class W_Shodan(object):
@@ -30,9 +31,8 @@ class W_Bing(object):
 		for val in match:
 				url.append(val)
 		return url
-class W_Zoomeye(object):
-	def search(self,keywords):
-		pass
+class W_Zoomeye(Zoo_main):
+	pass
 
 
 

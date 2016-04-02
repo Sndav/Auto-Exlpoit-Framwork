@@ -4,7 +4,7 @@
 try:
     import simplejson as json
 except ImportError:
-    import json
+    import netjson
 
 import collections
 
