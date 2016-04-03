@@ -13,13 +13,13 @@ class N_json(object):
 				headers = {}
 			j = json.dumps(dic)
 			res = requests.post(url,j,headers=headers)
-			print res.text
+			#print res.text
 			res = res.json()
 			return res
 		else :
 			if method == "get":
 				res = requests.get(url,headers=headers)
-				print res.text
+				#print res.text
 				res = res.json()
 				return res
 

@@ -4,9 +4,8 @@
 import shodan
 import requests
 import re
-from auto_exp.lib.core.finder.zoomeye.main import Zoo_main
+from auto_exp.lib.core.search.zoomeye.main import Zoo_main
 
-# Shodan Search
 class W_Shodan(object):
 	def __init__(self,api):
 		self.api = api
@@ -18,8 +17,6 @@ class W_Shodan(object):
 		for addr in result:
 			ip.append(addr['ip_str'])
 		return ip
-
-# Bing Search
 class W_Bing(object):
 	def search(self,keywords,count,pages = 1):
 		count = count
@@ -34,8 +31,19 @@ class W_Bing(object):
 		return url
 class W_Zoomeye(Zoo_main):
 	pass
+class W_Baidu(object):
+	def search(self,keywords,pages = 1):
+		page = str(10*(pages-1))
+		keyword = keywords.replace(' ','+')
+		url = "http://www.baidu.com/s?wd="+keyword+"&pn="+page
+		res = requests.get(url).text
+		url1 = re.findall(r'<a target="_blank" href="(.*?)" class="c-showurl" style="text-d',res)
+		url2 = []
+		for line in url1:
+			url2.append(requests.get(line).url)
+		return url2
 
-
-
+if __name__== "__main__":
+	pass
 
 

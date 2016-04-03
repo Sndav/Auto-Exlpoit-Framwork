@@ -3,7 +3,7 @@
 
 from auto_exp.lib.core.output.output import O_Output
 from auto_exp.lib.core.network.netjson import N_json
-from auto_exp.lib.core.finder.zoomeye.login import Zoo_login
+from auto_exp.lib.core.search.zoomeye.login import Zoo_login
 
 class Zoo_function(object):
 	output = O_Output()

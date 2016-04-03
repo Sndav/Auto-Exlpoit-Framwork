@@ -2,9 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-import sys
 from cmd import Cmd
-import readline
 from auto_exp.lib.method.switch.switch import switch
 from auto_exp.lib.core.exploit.load_exp import exp
 from auto_exp.lib.method.output.CLIOutput import CLIOutput
@@ -12,9 +10,13 @@ from auto_exp.lib.core.output.output import O_Output
 from auto_exp.lib.controller.db.db import DB
 from auto_exp.lib.core.file.file import IO_File
 from auto_exp.config.config import config
+from auto_exp.lib.core.search.subdomain import S_Subscan2
+from auto_exp.lib.core.network.network import N_Request
 
 class C_Base(Cmd):
 	def __init__(self):
+		self.net = N_Request()
+		self.subdomain = S_Subscan2()
 		self.config = config()
 		self.db = DB()
 		self.output = CLIOutput()
@@ -22,6 +24,7 @@ class C_Base(Cmd):
 		self.exp = exp()
 		Cmd.__init__(self)
 		os.system("clear")
+		self.output.printYellow( "Welcome To Auto-Exploit-Framework\nThe world Will Remember You Forever")
 		self.case_insensitive = False
 		self.prompt = self.config.default_console_words
 		self.isused = False
@@ -109,6 +112,24 @@ class C_Base(Cmd):
 		return a[level]
 	def default(self, line):
 		pass
+	def do_subdomain(self,domain):
+		try:
+			d = self.subdomain.search(domain)
+			i = 0
+			for line in d['result']['subdomain']:
+				sub = "http://"+line+'/'
+				if(self.net.check(sub)):
+					i = i+1
+					if( i % 40 == 0):
+						boo = raw_input("More[yes/no]:")
+						if boo != 'no':
+							self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+						else:
+							break
+					else:
+						self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+		except:
+			self.output2.print_error("Couldn't Find Subdomain")
 	def emptyline(self):
 		self.default('')
 if __name__ == "__main__":

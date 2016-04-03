@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 import re
 
-from auto_exp.lib.core.finder.subdomain import S_Subscan
+from auto_exp.lib.core.search.subdomain import S_Subscan
 from auto_exp.config.config import config
-from auto_exp.lib.core.finder.dirscan import S_Dirscan
-from auto_exp.lib.core.finder.search_address import *
+from auto_exp.lib.core.search.dirscan import S_Dirscan
+from auto_exp.lib.core.search.search_address import *
 
 class Search(object):
 	def __init__(self):
