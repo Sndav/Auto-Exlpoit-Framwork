@@ -35,6 +35,7 @@ class C_Base(Cmd):
 			print "    use [exp]                    : use exploit"
 			print "    show exploit                 : show the info of exploit"
 			print "    del [exp]                    : del exploit"
+			print "    load exploit                 : load exploit"
 			self.output.printYellow("[System]")
 			print "    exit                         : exit the system"
 			self.output.printYellow("[Exploit]")
@@ -95,6 +96,7 @@ class C_Base(Cmd):
 		if not arg:
 			pass
 		else:
+			# print self.config.path+'exploit/'+arg+'.py'
 			if self.file.check_file(self.config.path+'exploit/'+arg+'.py'):
 				exp = self.exp.load_exp(arg)
 				if arg == exp.info['Name']:
@@ -112,24 +114,24 @@ class C_Base(Cmd):
 		return a[level]
 	def default(self, line):
 		pass
-	def do_subdomain(self,domain):
-		try:
-			d = self.subdomain.search(domain)
-			i = 0
-			for line in d['result']['subdomain']:
-				sub = "http://"+line+'/'
-				if(self.net.check(sub)):
-					i = i+1
-					if( i % 40 == 0):
-						boo = raw_input("More[yes/no]:")
-						if boo != 'no':
-							self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-						else:
-							break
-					else:
-						self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-		except:
-			self.output2.print_error("Couldn't Find Subdomain")
+	# def do_subdomain(self,domain):
+	# 	try:
+	# 		d = self.subdomain.search(domain)
+	# 		i = 0
+	# 		for line in d['result']['subdomain']:
+	# 			sub = "http://"+line+'/'
+	# 			if(self.net.check(sub)):
+	# 				i = i+1
+	# 				if( i % 40 == 0):
+	# 					boo = raw_input("More[yes/no]:")
+	# 					if boo != 'no':
+	# 						self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+	# 					else:
+	# 						break
+	# 				else:
+	# 					self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+	# 	except:
+	# 		self.output2.print_error("Couldn't Find Subdomain")
 	def emptyline(self):
 		self.default('')
 if __name__ == "__main__":

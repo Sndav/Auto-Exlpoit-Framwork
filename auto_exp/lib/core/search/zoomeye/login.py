@@ -11,6 +11,8 @@ class Zoo_login():
 			"password":password
 		}
 	def get_token(self):
-		return self.net.request("https://api.zoomeye.org/user/login",self.dic)
+		response = self.net.request("https://api.zoomeye.org/user/login", self.dic)
+		print response
+		return response
 if __name__ == "__main__":
 	pass

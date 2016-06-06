@@ -2,9 +2,9 @@
 # -*- coding: utf-8 -*-
 import re
 
-from auto_exp.lib.core.search.subdomain import S_Subscan
+from auto_exp.lib.core.search.subdomain import S_Subscan1
 from auto_exp.config.config import config
-from auto_exp.lib.core.search.dirscan import S_Dirscan
+# auto_exp.lib.core.search.dirscan import S_Dirscan
 from auto_exp.lib.core.search.search_address import *
 
 class Search(object):
@@ -28,6 +28,12 @@ class Search(object):
 		ip = []
 		for i in range(page):
 			ip += shodan.search(string,i+1)
+		return ip
+	def run_zoomeye(self,string,page):
+		zoomeye = W_Zoomeye(self.config.zoom_user,self.config.zoom_password)
+		ip = []
+		for i in range(int(page)):
+			ip += zoomeye.web_search(string,i+1)
 		return ip
 if __name__ == "__main__":
 	pass

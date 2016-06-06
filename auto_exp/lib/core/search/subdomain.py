@@ -88,6 +88,7 @@ class S_Subscan1:
 		while self.thread_count > 0:
 			time.sleep(0.01)
 
+
 class S_Subscan2(object):
 	j = N_json()
 	def search(self,domain):

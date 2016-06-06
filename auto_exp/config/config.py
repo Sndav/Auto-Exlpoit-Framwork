@@ -4,7 +4,7 @@
 
 class config(object):
 	def __init__(self):
-		self.path = "/home/ubuntu/Code/Auto-Exp/"
+		self.path = "/home/hackboy/code/Auto-Exp/"
 		self.default_console_words = "AEF>"
 		self.phone_pattern = r"([133|155|139|151|189|187][1-9]{10})"
 		self.email_pattren = r"(\w+@\w+.\w+)"
@@ -22,5 +22,6 @@ class config(object):
 		self.default_dns_server = 'auto_exp/dic/dns_servers.txt'
 		self.default_web_dir = 'auto_exp/webaddr.dic'
 		self.shodan_api = 'iugjvSn7YGEikIrSDzgw3XBkI3RVYxG5'
-		#self.zoomeye.api =  // this will be configed by some speacial function
+		self.zoom_user = 'bossstyle@126.com'
+		self.zoom_password = 'wzzj123'
 

@@ -27,9 +27,12 @@ class Zoo_function(object):
 		headers = {
 			"Authorization": "JWT "+self.token
 		}
-		url = "https://api.zoomeye.org/web/search\?query\=\""+query+"\"&page="+str(page)+"&facet="+facets
+		url = "https://api.zoomeye.org/web/search/?query=\""+query+"\"&page="+str(page)+"&facet="+facets
+		print url
 		res = self.njson.request(url,headers=headers,method="get")
 		return  res
 
 if __name__ == "__main__":
-	pass
+	a = Zoo_function("bossstyle@126.com","wzzj123")
+	print a.web_search("structs")
+
