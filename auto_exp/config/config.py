@@ -24,6 +24,6 @@ class config(object):
         self.default_web_dir = 'auto_exp/webaddr.dic'
         self.shodan_api = 'iugjvSn7YGEikIrSDzgw3XBkI3RVYxG5'
         self.zoom_user = 'bossstyle@126.com'
-        self.zoom_password = ''
+        self.zoom_password = 'wzzj123'
         self.host = '127.0.0.1'
         self.api_port = 8090

@@ -10,7 +10,8 @@ from auto_exp.lib.core.output.output import O_Output
 from auto_exp.lib.controller.db.db import DB
 from auto_exp.lib.core.file.file import IO_File
 from auto_exp.config.config import config
-from auto_exp.lib.core.search.subdomain import S_Subscan2
+# from auto_exp.lib.core.search.subdomain import S_Subscan2
+from auto_exp.lib.core.search.discoverproxyserver import D_Proxy
 from auto_exp.lib.core.network.network import N_Request
 from auto_exp.lib.core.network.api.listener import *
 
@@ -40,6 +41,7 @@ class C_Base(Cmd):
             print "    show exploit                 : show the info of exploit"
             print "    del [exp]                    : del exploit"
             print "    load exploit                 : load exploit"
+            print "    proxysearch [page]           : Search Proxy"
             self.output.printYellow("[System]")
             print "    exit                         : exit the system"
             self.output.printYellow("[Web]")
@@ -72,6 +74,13 @@ class C_Base(Cmd):
                     break
         # else:
             # self.do_help()
+
+    def do_proxysearch(self, arg):
+        page = int(arg)
+        pro = D_Proxy()
+        re = pro.get(page)
+        name = ['IP', 'PORT']
+        self.output2.print_form(name, re)
 
     def do_use(self, arg):
         if arg:
@@ -120,9 +129,11 @@ class C_Base(Cmd):
 
     def do_del(self, arg):
         self.db.del_exp(arg)
+        pass
 
     def do_exit(self, arg):
         quit()
+        pass
 
     def __get_level(self, level):
         a = ['low', 'medium', 'high']
@@ -131,23 +142,23 @@ class C_Base(Cmd):
     def default(self, line):
         pass
     # def do_subdomain(self,domain):
-    # 	try:
-    # 		d = self.subdomain.search(domain)
-    # 		i = 0
-    # 		for line in d['result']['subdomain']:
-    # 			sub = "http://"+line+'/'
-    # 			if(self.net.check(sub)):
-    # 				i = i+1
-    # 				if( i % 40 == 0):
-    # 					boo = raw_input("More[yes/no]:")
-    # 					if boo != 'no':
-    # 						self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-    # 					else:
-    # 						break
-    # 				else:
-    # 					self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-    # 	except:
-    # 		self.output2.print_error("Couldn't Find Subdomain")
+    #   try:
+    #       d = self.subdomain.search(domain)
+    #       i = 0
+    #       for line in d['result']['subdomain']:
+    #           sub = "http://"+line+'/'
+    #           if(self.net.check(sub)):
+    #               i = i+1
+    #               if( i % 40 == 0):
+    #                   boo = raw_input("More[yes/no]:")
+    #                   if boo != 'no':
+    #                       self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+    #                   else:
+    #                       break
+    #               else:
+    #                   self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
+    #   except:
+    #       self.output2.print_error("Couldn't Find Subdomain")
 
     def do_runserver(self, arg):
         create_server(self.config.host, self.config.api_port)
