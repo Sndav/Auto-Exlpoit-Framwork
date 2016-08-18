@@ -47,7 +47,7 @@ class C_Base(Cmd):
             self.output.printYellow("[Web]")
             print "    runserver                    : start server"
             self.output.printYellow("[Exploit]")
-            print "    run exploit                  : run exploit"
+            print "    run                          : run exploit"
             self.output.printYellow("[Help]")
             print "    help [command]               : show help"
         else:
@@ -106,11 +106,10 @@ class C_Base(Cmd):
             self.output2.print_form(name, exploit)
 
     def do_run(self, arg):
-        if arg == 'exploit':
-            if self.isused:
-                self.exploit.run()
-            else:
-                self.output2.print_warning('Please Use an Exploit')
+        if self.isused:
+            self.exploit.run()
+        else:
+            self.output2.print_warning('Please Use an Exploit')
 
     def do_load(self, arg):
         if not arg:

@@ -37,7 +37,8 @@ class W_Bing(object):
                 r'\<li class="b_algo"\>\<h2\>\<a target="_blank" href=\"(.*?)\" ', res.content)
             for val in match:
                 url.append(val)
-        except:
+        except Exception, e:
+            print e
             pass
         return url
 
