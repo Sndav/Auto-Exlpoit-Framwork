@@ -10,7 +10,7 @@ from auto_exp.lib.core.output.output import O_Output
 from auto_exp.lib.controller.db.db import DB
 from auto_exp.lib.core.file.file import IO_File
 from auto_exp.config.config import config
-# from auto_exp.lib.core.search.subdomain import S_Subscan2
+from auto_exp.lib.core.search.subdomain import DNSBrute
 from auto_exp.lib.core.search.discoverproxyserver import D_Proxy
 from auto_exp.lib.core.network.network import N_Request
 from auto_exp.lib.core.network.api.listener import *
@@ -35,45 +35,21 @@ class C_Base(Cmd):
         self.file = IO_File()
 
     def do_help(self, arg):
-        if not arg:
-            self.output.printYellow("[Command]")
-            print "    use [exp]                    : use exploit"
-            print "    show exploit                 : show the info of exploit"
-            print "    del [exp]                    : del exploit"
-            print "    load exploit                 : load exploit"
-            print "    proxysearch [page]           : Search Proxy"
-            self.output.printYellow("[System]")
-            print "    exit                         : exit the system"
-            self.output.printYellow("[Web]")
-            print "    runserver                    : start server"
-            self.output.printYellow("[Exploit]")
-            print "    run                          : run exploit"
-            self.output.printYellow("[Help]")
-            print "    help [command]               : show help"
-        else:
-            self.__do_ls(arg)
-
-    def __do_ls(self, arg):
-        if not arg:
-            for case in switch(arg):
-                if case("use"):
-                    self.output.printYellow("[Command]")
-                    print "    use [exp]           : use exploit"
-                    break
-                if case("show"):
-                    self.output.printYellow("[Command]")
-                    print "    show exploit        : show the info of exp"
-                    break
-                if case("exit"):
-                    self.output.printYellow("[System]")
-                    print "    exit                : exit the system"
-                    break
-                if case("del"):
-                    self.output.printYellow("[Command]")
-                    print "    del [exp]           : del exploit"
-                    break
-        # else:
-            # self.do_help()
+        self.output.printYellow("[Command]")
+        print "    use [exp]                    : use exploit"
+        print "    show exploit                 : show the info of exploit"
+        print "    del [exp]                    : del exploit"
+        print "    load exploit                 : load exploit"
+        print "    proxysearch [page]           : Search Proxy"
+        print "    subdimain [domain]           : Search Subdimain"
+        self.output.printYellow("[System]")
+        print "    exit                         : exit the system"
+        self.output.printYellow("[Web]")
+        print "    runserver                    : start server"
+        self.output.printYellow("[Exploit]")
+        print "    run                          : run exploit"
+        self.output.printYellow("[Help]")
+        print "    help [command]               : show help"
 
     def do_proxysearch(self, arg):
         page = int(arg)
@@ -140,24 +116,13 @@ class C_Base(Cmd):
 
     def default(self, line):
         pass
-    # def do_subdomain(self,domain):
-    #   try:
-    #       d = self.subdomain.search(domain)
-    #       i = 0
-    #       for line in d['result']['subdomain']:
-    #           sub = "http://"+line+'/'
-    #           if(self.net.check(sub)):
-    #               i = i+1
-    #               if( i % 40 == 0):
-    #                   boo = raw_input("More[yes/no]:")
-    #                   if boo != 'no':
-    #                       self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-    #                   else:
-    #                       break
-    #               else:
-    #                   self.output2.print_warning("Found "+sub+"   Title:"+self.net.get_title(sub))
-    #   except:
-    #       self.output2.print_error("Couldn't Find Subdomain")
+
+    def do_subdomain(self, domain):
+        d = DNSBrute(target=domain,
+                     names_file=self.config.default_subdomainfix,
+                     ignore_intranet=False,
+                     threads_num=10)
+        d.run()
 
     def do_runserver(self, arg):
         create_server(self.config.host, self.config.api_port)

@@ -21,7 +21,9 @@ class config(object):
             'type': 'int(2) not null'
         }
         self.default_dns_server = 'auto_exp/dic/dns_servers.txt'
-        self.default_web_dir = 'auto_exp/webaddr.dic'
+        self.default_web_dir = 'auto_exp/dic/webaddr.dic'
+        self.default_subdomainfix = 'auto_exp/dic/subnames.txt'
+        self.default_next_sub = 'auto_exp/dic/next_sub.txt'
         self.shodan_api = 'iugjvSn7YGEikIrSDzgw3XBkI3RVYxG5'
         self.zoom_user = 'bossstyle@126.com'
         self.zoom_password = 'wzzj123'
