@@ -3,7 +3,7 @@
 
 import os
 from cmd import Cmd
-from auto_exp.lib.method.switch.switch import switch
+# from auto_exp.lib.method.switch.switch import switch
 from auto_exp.lib.core.exploit.load_exp import exp
 from auto_exp.lib.method.output.CLIOutput import CLIOutput
 from auto_exp.lib.core.output.output import O_Output
@@ -27,8 +27,8 @@ class C_Base(Cmd):
         self.exp = exp()
         Cmd.__init__(self)
         os.system("clear")
-        self.output.printYellow(
-            "Welcome To Auto-Exploit-Framework\nThe world Will Remember You Forever")
+        self.output.printYellow(self.config.logo +
+                                "Welcome To Auto-Exploit-Framework\nThe world Will Remember You Forever")
         self.case_insensitive = False
         self.prompt = self.config.default_console_words
         self.isused = False
@@ -94,6 +94,7 @@ class C_Base(Cmd):
             # print self.config.path+'exploit/'+arg+'.py'
             if self.file.check_file(self.config.path + 'exploit/' + arg + '.py'):
                 exp = self.exp.load_exp(arg)
+                # print arg
                 if arg == exp.info['Name']:
                     self.db.insert_exp(exp.info['Name'], exp.info['Desc'], exp.info[
                                        'Level'], exp.info['Author'])

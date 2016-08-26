@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import re
 
-from auto_exp.lib.core.search.subdomain import S_Subscan1
+# from auto_exp.lib.core.search.subdomain import S_Subscan1
 from auto_exp.config.config import config
 # auto_exp.lib.core.search.dirscan import S_Dirscan
 from auto_exp.lib.core.search.search_address import *

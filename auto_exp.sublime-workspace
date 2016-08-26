@@ -1,0 +1,293 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "auto_exp/lib/core/console/consoles.py",
+			"settings":
+			{
+				"buffer_size": 4668,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "{\n	\"auto_complete\": false,\n	\"color_scheme\": \"Packages/Color Scheme - Default/Solarized (Dark).tmTheme\",\n	\n	\"file_exclude_patterns\":\n	[\n		\".*\",\n		\"*.sublime-*\",\n		\"*.pyc\"\n	],\n	\"folder_exclude_patterns\":\n	[\n		\".*\"\n	],\n	\"font_size\": 13,\n	\"highlight_line\": true,\n	\"ignored_packages\":\n	[\n		\"Vintage\"\n	],\n	\"tab_size\": 4,\n	\"theme\": \"Spacegray.sublime-theme\",\n	\"translate_tabs_to_spaces\": true,\n}\n",
+			"file": "/home/sndav/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+			"file_size": 387,
+			"file_write_time": 131166861022851659,
+			"settings":
+			{
+				"buffer_size": 389,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 246.0,
+		"last_filter": "insta",
+		"selected_items":
+		[
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"insa",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+			"import urllib.request,os; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), 'wb').write(urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ','%20')).read())"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/sndav/code/Auto-Exp",
+		"/home/sndav/code/Auto-Exp/auto_exp",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/database"
+	],
+	"file_history":
+	[
+		"/home/sndav/.config/sublime-text-3/Packages/Anaconda/Anaconda.sublime-settings",
+		"/home/sndav/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/etc/apache2/sites-available/000-default.conf",
+		"/home/sndav/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/sndav/code/Auto-Exp/auto_exp/config/config.py",
+		"/home/sndav/code/Auto-Exp/logo",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/search/cloudeye.py",
+		"/home/sndav/.config/sublime-text-3/Packages/User/pep8_autoformat.sublime-settings",
+		"/home/sndav/code/Auto-Exp/subl"
+	],
+	"find":
+	{
+		"height": 41.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"E501",
+			"minimap",
+			"	",
+			"ignore",
+			"	"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"    "
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "auto_exp/lib/core/console/consoles.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4668,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1028,
+								1028
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 300.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/sndav/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 389,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								211,
+								211
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"rulers":
+							[
+							],
+							"spell_check": false,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 28.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "auto_exp.sublime-project",
+	"replace":
+	{
+		"height": 52.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 207.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

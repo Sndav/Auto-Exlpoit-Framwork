@@ -5,7 +5,6 @@ import time
 class T_CloudEye:
 
     def __init__(self, key, url_uniq, url_prefix):
-        ''' eg. fas.poc.22d0d6.dnslog.info , url_uniq = 22d0d6 url_prefix=fas.poc'''
         self.key = key
         self.prefix = url_prefix
         self.uniq = url_uniq

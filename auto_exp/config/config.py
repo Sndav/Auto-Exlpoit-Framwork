@@ -5,7 +5,7 @@
 class config(object):
 
     def __init__(self):
-        self.path = "/home/hackboy/code/Auto-Exp/"
+        self.path = "/home/sndav/code/Auto-Exp/"
         self.default_console_words = "AEF>"
         self.phone_pattern = r"([133|155|139|151|189|187][1-9]{10})"
         self.email_pattren = r"(\w+@\w+.\w+)"
@@ -29,3 +29,9 @@ class config(object):
         self.zoom_password = 'wzzj123'
         self.host = '127.0.0.1'
         self.api_port = 8090
+        self.logo = "    _         _              _____            \n" + \
+            "   / \  _   _| |_ ___       | ____|_  ___ __  \n" + \
+            "  / _ \| | | | __/ _ \ _____|  _| \ \/ / '_ \ \n" + \
+            " / ___ \ |_| | || (_) |_____| |___ >  <| |_) |\n" + \
+            "/_/   \_\__,_|\__\___/      |_____/_/\_\ .__/ \n" + \
+            "                                       |_|    \n"
