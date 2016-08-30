@@ -87,6 +87,9 @@ class C_Base(Cmd):
         else:
             self.output2.print_warning('Please Use an Exploit')
 
+    def do_config(self, arg):
+        pass
+
     def do_load(self, arg):
         if not arg:
             pass

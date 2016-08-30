@@ -6,9 +6,6 @@ import os
 
 class IO_File(object):
 
-    def __init__(self):
-        pass
-
     def read(self, path):
         if self.check_file(path):
             self.create_file(path)

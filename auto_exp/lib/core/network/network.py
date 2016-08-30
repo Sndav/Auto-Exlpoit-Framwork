@@ -10,6 +10,9 @@ class N_Request(object):
 
     use_proxy = False
 
+    def __init__(self, use_proxy="False"):
+        self.use_proxy = use_proxy
+
     def get_title(self, url):
         headers = {'Accept-Language': 'zh-cn',
                    'Content-Type': 'application/x-www-form-urlencoded',

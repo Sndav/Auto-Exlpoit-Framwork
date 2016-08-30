@@ -3,12 +3,12 @@
 #  it under the terms of the GNU General Public License as published by
 #  the Free Software Foundation; either version 2 of the License, or
 #  (at your option) any later version.
-#  
+#
 #  This program is distributed in the hope that it will be useful,
 #  but WITHOUT ANY WARRANTY; without even the implied warranty of
 #  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 #  GNU General Public License for more details.
-#  
+#
 #  You should have received a copy of the GNU General Public License
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
@@ -52,7 +52,8 @@ class CLIOutput(object):
             sys.stdout.write(line)
             width = csbi.dwCursorPosition.X
             csbi.dwCursorPosition.X = 0
-            FillConsoleOutputCharacter(STDOUT, ' ', width, csbi.dwCursorPosition)
+            FillConsoleOutputCharacter(
+                STDOUT, ' ', width, csbi.dwCursorPosition)
             sys.stdout.write(line)
             sys.stdout.flush()
         else:
@@ -60,7 +61,7 @@ class CLIOutput(object):
             sys.stdout.write('\033[0G')
 
     def printNewLine(self, string):
-        if self.lastInLine == True:
+        if self.lastInLine:
             self.eraseLine()
         if platform.system() == 'Windows':
             sys.stdout.write(string)
@@ -89,12 +90,13 @@ class CLIOutput(object):
         self.printNewLine(message)
 
     def printYellow(self, text):
-        config =  Style.BRIGHT + Fore.YELLOW
+        config = Style.BRIGHT + Fore.YELLOW
         config += text
         config += Style.RESET_ALL
         self.printNewLine(config)
-    def printRed(self,text):
+
+    def printRed(self, text):
         output = Style.BRIGHT + Fore.RED
         output += text
         config += Style.RESET_ALL
-    #def print
+    # def print
