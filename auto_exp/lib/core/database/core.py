@@ -104,8 +104,7 @@ class D_Mysql(object):
         if self.__isconnected:
             if len(key) == 0:
                 value = ['*']
-            else:
-                value = ','.join(key)
+            value = ','.join(key)
             query = 'select ' + value + ' from `' + table + '` where ' + where
             return self.db_query(query)
         else:

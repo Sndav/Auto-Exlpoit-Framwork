@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"d",
+				"db_select〔function〕"
+			],
+			[
+				"ta",
+				"taskid"
+			],
+			[
+				"db",
+				"db_update	(core.py)"
+			],
+			[
+				"__",
+				"__md5"
+			],
+			[
+				"db_",
+				"db_insert〔function〕"
+			],
+			[
+				"m",
+				"MySQL_db	statement"
+			],
+			[
+				"c",
+				"config"
+			],
+			[
+				"D",
+				"D_Mysql	class"
+			],
+			[
+				"da",
+				"database	module"
+			],
+			[
+				"strc",
+				"strcmp〔function〕"
+			],
+			[
+				"co",
+				"core	module"
+			],
+			[
+				"to",
+				"tools"
+			],
+			[
+				"auto",
+				"auto_exp"
+			],
+			[
 				"opt",
 				"options"
 			],
@@ -56,10 +108,6 @@
 				"dic_path"
 			],
 			[
-				"__",
-				"__init__"
-			],
-			[
 				"T",
 				"threading"
 			],
@@ -92,10 +140,6 @@
 				"proxy"
 			],
 			[
-				"c",
-				"core	module"
-			],
-			[
 				"aut",
 				"auto_exp	module"
 			],
@@ -108,10 +152,26 @@
 	"buffers":
 	[
 		{
-			"file": "auto_exp/lib/core/tools/sqlmap.py",
+			"file": "auto_exp/lib/core/data/action.py",
 			"settings":
 			{
-				"buffer_size": 3623,
+				"buffer_size": 1179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "auto_exp/lib/core/database/core.py",
+			"settings":
+			{
+				"buffer_size": 4155,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "README.md",
+			"settings":
+			{
+				"buffer_size": 1027,
 				"line_ending": "Unix"
 			}
 		}
@@ -124,9 +184,25 @@
 	"command_palette":
 	{
 		"height": 400.0,
-		"last_filter": "install",
+		"last_filter": "i",
 		"selected_items":
 		[
+			[
+				"i",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"git add ",
+				"Git: Add All"
+			],
+			[
+				"git",
+				"GitGutter: Show Diff Popup"
+			],
 			[
 				"install",
 				"Package Control: Install Package"
@@ -140,15 +216,11 @@
 				"Package Control: Install Package"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
-			],
-			[
 				"inst",
 				"Package Control: Install Package"
 			]
 		],
-		"width": 493.0
+		"width": 601.0
 	},
 	"console":
 	{
@@ -172,11 +244,19 @@
 		"/home/sndav/code/Auto-Exp",
 		"/home/sndav/code/Auto-Exp/auto_exp",
 		"/home/sndav/code/Auto-Exp/auto_exp/lib",
-		"/home/sndav/code/Auto-Exp/auto_exp/lib/core",
-		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/tools"
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/controller",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/controller/db"
 	],
 	"file_history":
 	[
+		"/home/sndav/code/Auto-Exp/auto_exp/config/config.py",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/data/__init__.py",
+		"/home/sndav/.config/sublime-text-3/Packages/User/pinit.sublime-snippet",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/tools/tools.py",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/exploit/base_class.py",
+		"/home/sndav/hack/sqlmap/requests/111",
+		"/home/sndav/temp/1.php",
+		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/tools/sqlmap.py",
 		"/usr/share/nmap/scripts/http-default-accounts.nse",
 		"/usr/share/nmap/nselib/shortport.lua",
 		"/usr/share/nmap/scripts/http-git.nse",
@@ -203,7 +283,6 @@
 		"/home/sndav/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/etc/apache2/sites-available/000-default.conf",
 		"/home/sndav/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/sndav/code/Auto-Exp/auto_exp/config/config.py",
 		"/home/sndav/code/Auto-Exp/logo",
 		"/home/sndav/code/Auto-Exp/auto_exp/lib/core/search/cloudeye.py",
 		"/home/sndav/.config/sublime-text-3/Packages/User/pep8_autoformat.sublime-settings",
@@ -261,19 +340,19 @@
 			[
 				{
 					"buffer": 0,
-					"file": "auto_exp/lib/core/tools/sqlmap.py",
+					"file": "auto_exp/lib/core/data/action.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3623,
+						"buffer_size": 1179,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								3623,
-								3623
+								565,
+								565
 							]
 						],
 						"settings":
@@ -284,10 +363,73 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1867.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "auto_exp/lib/core/database/core.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4155,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3545,
+								3545
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"origin_encoding": "ASCII",
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1764.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "README.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1027,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								986,
+								986
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 252.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -374,7 +516,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 207.0,
+	"side_bar_width": 149.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{
