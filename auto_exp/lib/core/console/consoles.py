@@ -48,6 +48,8 @@ class C_Base(Cmd):
         print "    runserver                    : start server"
         self.output.printYellow("[Exploit]")
         print "    run                          : run exploit"
+        print "    show config                  : show the config of exploit"
+        print "    config [var] [value]         : set the var's value"
         self.output.printYellow("[Help]")
         print "    help [command]               : show help"
 
@@ -80,6 +82,8 @@ class C_Base(Cmd):
                 exploit[i] = list(exploit[i])
                 exploit[i][3] = self.__get_level(exploit[i][3])
             self.output2.print_form(name, exploit)
+        elif arg == "config":
+            self.do_config(None)
 
     def do_run(self, arg):
         if self.isused:
@@ -88,7 +92,29 @@ class C_Base(Cmd):
             self.output2.print_warning('Please Use an Exploit')
 
     def do_config(self, arg):
-        pass
+        if arg != None:
+            if self.isused:
+                try:
+                    key = arg.split()[0]
+                    value = arg.split()[1]
+                    self.exploit.var[key] = value
+                except:
+                    self.output2.print_error("Must Be 2 Arguements")
+        else:
+            if self.isused:
+                try:
+                    value = []
+                    var = self.exploit.var
+                    keys = var.keys()
+                    for key in keys:
+                        value.append(var[key])
+                    temp = ['']
+                    temp[0] = value
+                    value = temp
+                    # progress data
+                    self.output2.print_form(keys, value)
+                except:
+                    self.output2.print_error("This Exploit Can't Be Configured")
 
     def do_load(self, arg):
         if not arg:

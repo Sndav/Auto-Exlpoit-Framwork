@@ -34,7 +34,7 @@ class Zoo_function(object):
         }
         url = "https://api.zoomeye.org/web/search/?query=\"" + \
             query + "\"&page=" + str(page) + "&facet=" + facets
-        print url
+        #print url
         res = self.njson.request(url, headers=headers, method="get")
         return res
 

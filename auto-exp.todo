@@ -1,0 +1,14 @@
+
+exp-tasks:
+  ✔ Add unautority redis exploit @done (16-09-14 23:39)
+        ./exploit/redis-unanthorized.py
+
+
+framework-task:
+  ✔ make it possible to use databases to pass data @done (16-09-14 23:13)
+       ./auto_exp/lib/core/data/action.py
+
+note: 
+  - use threads with queue is more efficient @important
+  - 
+

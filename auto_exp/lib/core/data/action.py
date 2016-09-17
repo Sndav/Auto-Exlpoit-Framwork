@@ -1,6 +1,7 @@
 from auto_exp.lib.core.database.core import D_Mysql
 from auto_exp.config.config import config
-import hashlib,uuid
+import hashlib
+import uuid
 
 
 class D_Action:
@@ -36,5 +37,7 @@ class D_Action:
         taskid = self.__md5(taskid)
         where = "taskid = '" + taskid + "'"
         rec = self.DB.db_select(self.table, ['data'], where)
-if __name__ == "__main__":
+        return rec[0]
+
+if __name__ == '__main__':
     pass
