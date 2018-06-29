@@ -2,3 +2,6 @@
 /auto_exp/config/config.py
 /exploit/
 /*.sublime*
+/autoenv/
+/tmp/
+*.pyc
