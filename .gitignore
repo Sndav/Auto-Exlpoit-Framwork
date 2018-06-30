@@ -5,3 +5,5 @@
 /autoenv/
 /tmp/
 *.pyc
+*.py
+auto_exp/config/__init__.pyc

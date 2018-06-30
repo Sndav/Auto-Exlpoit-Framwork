@@ -5,13 +5,13 @@
 class config(object):
 
     def __init__(self):
-        self.path = "/home/sndav/code/Auto-Exp/"
+        self.path = "E://code//Auto-Exploit-Framework//"
         self.default_console_words = "AEF>"
         self.phone_pattern = r"([133|155|139|151|189|187][1-9]{10})"
         self.email_pattren = r"(\w+@\w+.\w+)"
         self.MySQL_user = 'root'
-        self.MySQL_password = 'root'
-        self.MySQL_host = '127.0.0.1'
+        self.MySQL_password = 'wzzj123123'
+        self.MySQL_host = '122.152.230.160'
         self.MySQL_port = 3306
         self.MySQL_db = 'auto_exp'
         self.filter = ["'", "#", '-', '%']
