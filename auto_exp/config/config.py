@@ -10,8 +10,8 @@ class config(object):
         self.phone_pattern = r"([133|155|139|151|189|187][1-9]{10})"
         self.email_pattren = r"(\w+@\w+.\w+)"
         self.MySQL_user = 'root'
-        self.MySQL_password = 'wzzj123123'
-        self.MySQL_host = '122.152.230.160'
+        self.MySQL_password = ''
+        self.MySQL_host = ''
         self.MySQL_port = 3306
         self.MySQL_db = 'auto_exp'
         self.filter = ["'", "#", '-', '%']
@@ -24,9 +24,9 @@ class config(object):
         self.default_web_dir = 'auto_exp/dic/webaddr.dic'
         self.default_subdomainfix = 'auto_exp/dic/subnames.txt'
         self.default_next_sub = 'auto_exp/dic/next_sub.txt'
-        self.shodan_api = 'iugjvSn7YGEikIrSDzgw3XBkI3RVYxG5'
-        self.zoom_user = 'bossstyle@126.com'
-        self.zoom_password = 'wzzj123'
+        self.shodan_api = ''
+        self.zoom_user = ''
+        self.zoom_password = ''
         self.host = '127.0.0.1'
         self.api_port = 8090
         self.logo = "    _         _              _____            \n" + \
